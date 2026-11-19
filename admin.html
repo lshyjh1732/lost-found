@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자 페이지</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">명신여자고등학교 분실물 센터</a>
+
+        <div class="menu-container">
+            <button class="menu-button" id="menuButton">☰</button>
+
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a href="admin.html">관리자 페이지</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-container">
+        <div class="page-heading">
+            <p class="small-title">ADMINISTRATION</p>
+            <h1>관리자 페이지</h1>
+            <p>등록된 분실물을 확인하고 관리할 수 있습니다.</p>
+        </div>
+
+        <!-- 관리자 로그인 -->
+        <section id="adminLogin" class="form-card">
+            <h2>관리자 로그인</h2>
+
+            <p class="form-description">
+                관리자 비밀번호를 입력해 주세요.
+            </p>
+
+            <form id="adminLoginForm">
+                <input
+                    type="password"
+                    id="adminPassword"
+                    placeholder="비밀번호 입력"
+                    required
+                >
+
+                <button type="submit" class="submit-button">
+                    로그인
+                </button>
+            </form>
+        </section>
+
+        <!-- 관리자 전용 관리 화면 -->
+        <section id="adminPanel" class="admin-panel" hidden>
+            <div class="admin-top">
+                <h2>분실물 관리</h2>
+
+                <button id="adminLogout" class="logout-button">
+                    로그아웃
+                </button>
+            </div>
+
+            <p class="form-description">
+                물품의 자세한 정보를 확인하고 상태를 변경하거나 삭제할 수 있습니다.
+            </p>
+
+            <div id="adminItemList" class="item-list"></div>
+        </section>
+
+        <a href="index.html" class="back-button">
+            홈으로 돌아가기
+        </a>
+    </main>
+
+    <footer>명신여자고등학교 분실물 센터</footer>
+</body>
+</html>

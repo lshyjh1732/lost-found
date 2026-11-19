@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>분실물 등록</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">명신여자고등학교 분실물 센터</a>
+        <div class="menu-container">
+            <button class="menu-button" id="menuButton">☰</button>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a href="admin.html">관리자 페이지</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-container">
+        <div class="page-heading">
+            <p class="small-title">REGISTER LOST ITEM</p>
+            <h1>분실물 등록</h1>
+            <p>습득한 물건의 정보를 입력해 주세요.</p>
+        </div>
+
+        <form id="registerForm" class="form-card">
+            <label for="itemName">물건 이름</label>
+            <input type="text" id="itemName" placeholder="예: 검은색 필통" required>
+
+            <label for="itemImage">물건 사진</label>
+            <input type="file" id="itemImage" accept="image/*" required>
+
+            <label for="finder">발견자 이름</label>
+            <input type="text" id="finder" placeholder="이름을 입력하세요" required>
+
+            <label for="foundLocation">발견 위치</label>
+            <input type="text" id="foundLocation" placeholder="예: 2층 복도" required>
+
+            <label for="storageLocation">보관된 장소</label>
+            <input type="text" id="storageLocation" placeholder="예: 교무실" required>
+
+            <label for="contact">연락처</label>
+            <input
+                type="tel"
+                id="contact"
+                placeholder="010-1234-5678"
+                pattern="010-[0-9]{4}-[0-9]{4}"
+                maxlength="13"
+                required
+            >
+
+            <button type="submit" class="submit-button">분실물 등록하기</button>
+        </form>
+
+        <a href="index.html" class="back-button">홈으로 돌아가기</a>
+    </main>
+
+    <footer>명신여자고등학교 분실물 센터</footer>
+</body>
+</html>
